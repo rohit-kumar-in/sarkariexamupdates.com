@@ -1,3 +1,5 @@
+<style>
+
 /* =========================================================
    SARKARI EXAM UPDATES
    UNIVERSAL JOB / ADMIT CARD / RESULT POST CSS
@@ -1054,7 +1056,7 @@
     .job-table tr:hover {
         background: transparent;
     }
-
+</style>
     .job-master-container a {
         color: #000;
     }
