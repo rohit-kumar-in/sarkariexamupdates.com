@@ -1,0 +1,1070 @@
+/* =========================================================
+   SARKARI EXAM UPDATES
+   UNIVERSAL JOB / ADMIT CARD / RESULT POST CSS
+   ========================================================= */
+
+
+/* =========================================================
+   1. DESIGN TOKENS
+   ========================================================= */
+
+:root {
+    --primary: #0b3d91;
+    --primary-dark: #072b68;
+
+    --primary-light: #eaf2ff;
+    --primary-soft: #f2f7ff;
+    --primary-border: #cbdcf5;
+
+    --text: #444;
+    --text-dark: #333;
+    --text-muted: #666;
+
+    --white: #fff;
+
+    --border: #e1e4e8;
+    --border-light: #dee2e6;
+    --border-soft: #eee;
+
+    --table-header: #263238;
+    --table-row: #f8f9fa;
+    --table-hover: #eef5ff;
+
+    --success: #198754;
+    --success-dark: #146c43;
+
+    --dark: #343a40;
+    --dark-hover: #23272b;
+
+    --info-text: #123b70;
+    --source-border: #6c757d;
+
+    --radius-sm: 5px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-small: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    --content-width: 900px;
+}
+
+
+/* =========================================================
+   2. BASE / RESET
+   ========================================================= */
+
+.job-master-container,
+.job-master-container *,
+.job-master-container *::before,
+.job-master-container *::after {
+    box-sizing: border-box;
+}
+
+.job-master-container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 40px auto;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--text);
+    line-height: 1.6;
+
+    -webkit-text-size-adjust: 100%;
+    overflow-wrap: break-word;
+}
+
+.job-master-container h1,
+.job-master-container h2,
+.job-master-container h3,
+.job-master-container h4,
+.job-master-container p {
+    margin-top: 0;
+}
+
+.job-master-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.job-master-container a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.job-master-container a:hover {
+    text-decoration: underline;
+}
+
+.job-master-container a:focus-visible {
+    outline: 3px solid rgba(11, 61, 145, 0.35);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.job-master-container ul,
+.job-master-container ol {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.job-master-container button,
+.job-master-container input,
+.job-master-container textarea,
+.job-master-container select {
+    font: inherit;
+}
+
+
+/* =========================================================
+   3. MAIN HEADER
+   ========================================================= */
+
+.job-main-header {
+    background: linear-gradient(
+        135deg,
+        var(--primary) 0%,
+        var(--primary-dark) 100%
+    );
+
+    color: var(--white);
+
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.job-main-header h1 {
+    margin: 0 0 10px;
+
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 700;
+
+    color: var(--white);
+    letter-spacing: 0.2px;
+
+    overflow-wrap: anywhere;
+}
+
+.job-main-header p {
+    margin: 6px 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+
+    color: var(--white);
+    opacity: 0.95;
+}
+
+
+/* =========================================================
+   4. HIGHLIGHT BOX
+   ========================================================= */
+
+.job-highlight-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: center;
+
+    background: var(--primary-soft);
+    border-bottom: 3px solid var(--primary);
+
+    padding: 20px;
+}
+
+.highlight-item {
+    flex: 1 1 180px;
+    min-width: 180px;
+
+    margin: 8px;
+    text-align: center;
+}
+
+.highlight-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    color: var(--text-muted);
+}
+
+.highlight-value {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 800;
+
+    color: var(--primary);
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   5. MAIN CONTENT
+   ========================================================= */
+
+.job-content {
+    padding: 0 25px;
+
+    color: var(--text);
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    overflow-wrap: break-word;
+}
+
+.job-content p {
+    margin: 0 0 15px;
+}
+
+.job-content strong {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.job-content ul,
+.job-content ol {
+    padding-left: 25px;
+}
+
+.job-content li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   6. SECTION HEADINGS
+   ========================================================= */
+
+.job-sub-heading {
+    display: block;
+
+    margin: 30px 0 20px;
+    padding: 12px 20px;
+
+    background: var(--primary-light);
+
+    border-left: 6px solid var(--primary);
+
+    color: var(--primary);
+
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   7. TABLES
+   ========================================================= */
+
+.job-table-wrap {
+    width: 100%;
+
+    margin-bottom: 25px;
+
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.job-table {
+    width: 100%;
+    min-width: 520px;
+
+    margin: 0;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    background: var(--white);
+
+    font-size: 15px;
+}
+
+.job-table th {
+    padding: 14px 15px;
+
+    background: var(--table-header);
+    color: var(--white);
+
+    text-align: left;
+
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+
+    border: 1px solid var(--table-header);
+}
+
+.job-table td {
+    padding: 13px 15px;
+
+    border: 1px solid var(--border-light);
+
+    color: #495057;
+
+    vertical-align: middle;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+.job-table tbody tr:nth-child(even) {
+    background: var(--table-row);
+}
+
+.job-table tbody tr:hover {
+    background: var(--table-hover);
+}
+
+
+/* =========================================================
+   8. NUMBERED STEPS
+   ========================================================= */
+
+.step-list {
+    list-style: none;
+
+    margin: 0 0 20px;
+    padding: 0;
+
+    counter-reset: step-counter;
+}
+
+.step-list li {
+    position: relative;
+
+    margin: 0 0 18px;
+    padding-left: 50px;
+
+    color: var(--text);
+
+    line-height: 1.6;
+}
+
+.step-list li::before {
+    content: counter(step-counter);
+
+    counter-increment: step-counter;
+
+    position: absolute;
+
+    left: 0;
+    top: -2px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: 50%;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   9. INFO BOX
+   ========================================================= */
+
+.info-box {
+    margin: 15px 0 20px;
+    padding: 18px 20px;
+
+    background: #e8f1ff;
+
+    border-left: 5px solid var(--primary);
+    border-radius: var(--radius-md);
+
+    color: var(--info-text);
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+.info-box strong {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   10. FAQ
+   ========================================================= */
+
+.faq-container {
+    padding: 0;
+}
+
+.faq-box {
+    margin: 12px 0;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+
+    overflow: hidden;
+
+    background: var(--white);
+}
+
+.faq-q {
+    display: block;
+
+    padding: 15px 20px;
+
+    background: #f1f6ff;
+
+    color: var(--primary);
+
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+.faq-a {
+    padding: 18px 20px;
+
+    background: var(--white);
+
+    border-top: 1px solid var(--border-soft);
+
+    color: #555;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   11. IMPORTANT LINKS / CTA AREA
+   ========================================================= */
+
+.link-area {
+    margin: 40px 25px;
+    padding: 25px;
+
+    background: #f1f6ff;
+
+    border: 1px solid var(--primary-border);
+    border-radius: var(--radius-lg);
+
+    text-align: center;
+}
+
+.action-btn {
+    display: inline-block;
+
+    margin: 8px;
+    padding: 13px 25px;
+
+    background: var(--success);
+    color: var(--white) !important;
+
+    border-radius: var(--radius-sm);
+
+    text-decoration: none !important;
+
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.action-btn:hover {
+    background: var(--success-dark);
+    color: var(--white) !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+.action-btn:focus-visible {
+    outline: 3px solid rgba(11, 61, 145, 0.35);
+    outline-offset: 2px;
+}
+
+.notice-btn {
+    background: var(--dark);
+}
+
+.notice-btn:hover {
+    background: var(--dark-hover);
+}
+
+.home-btn {
+    background: var(--primary);
+}
+
+.home-btn:hover {
+    background: var(--primary-dark);
+}
+
+
+/* =========================================================
+   12. TAGS
+   ========================================================= */
+
+.tags-container {
+    margin-top: 30px;
+    padding: 25px;
+
+    background: var(--primary-soft);
+
+    border-top: 1px solid var(--primary);
+}
+
+.tag-title {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.tag-chip {
+    display: inline-block;
+
+    margin: 0 8px 10px 0;
+    padding: 7px 14px;
+
+    background: var(--white);
+
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+
+    color: var(--primary);
+
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.tag-chip:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   13. SOURCE NOTE
+   ========================================================= */
+
+.source-note {
+    margin: 25px 0;
+    padding: 15px 18px;
+
+    background: #f8f9fa;
+
+    border-left: 4px solid var(--source-border);
+
+    color: #555;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+.source-note strong {
+    color: var(--dark);
+}
+
+
+/* =========================================================
+   14. OPTIONAL CATEGORY BADGES
+   Recruitment / Admit Card / Result / Answer Key etc.
+   ========================================================= */
+
+.post-type-badge {
+    display: inline-block;
+
+    margin-bottom: 10px;
+    padding: 5px 12px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   15. IMPORTANT NOTICE / WARNING
+   ========================================================= */
+
+.notice-box {
+    margin: 20px 0;
+    padding: 16px 18px;
+
+    background: #fff8e1;
+
+    border-left: 5px solid #f0ad00;
+    border-radius: var(--radius-md);
+
+    color: #5f4b00;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   16. SUCCESS / RESULT BOX
+   ========================================================= */
+
+.result-box {
+    margin: 20px 0;
+    padding: 18px 20px;
+
+    background: #eaf7ef;
+
+    border-left: 5px solid var(--success);
+    border-radius: var(--radius-md);
+
+    color: #155724;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   17. DOWNLOAD / RESULT LINK GROUP
+   ========================================================= */
+
+.important-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 20px 0;
+}
+
+.important-links .action-btn {
+    margin: 0;
+}
+
+
+/* =========================================================
+   18. MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .job-master-container {
+        width: auto;
+
+        margin: 10px;
+
+        border-radius: var(--radius-md);
+
+        box-shadow: var(--shadow-small);
+    }
+
+    .job-main-header {
+        padding: 28px 15px;
+    }
+
+    .job-main-header h1 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .job-main-header p {
+        font-size: 14px;
+    }
+
+    .job-highlight-box {
+        padding: 15px;
+    }
+
+    .highlight-item {
+        flex: 100%;
+
+        min-width: 0;
+
+        margin: 5px 0;
+        padding: 8px 0 12px;
+
+        border-bottom: 1px dashed #ddd;
+    }
+
+    .highlight-item:last-child {
+        border-bottom: none;
+    }
+
+    .highlight-value {
+        font-size: 19px;
+    }
+
+    .job-content {
+        padding: 0 15px;
+
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .job-sub-heading {
+        margin: 25px 0 16px;
+        padding: 11px 15px;
+
+        border-left-width: 5px;
+
+        font-size: 18px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE TABLES
+       ----------------------------------------------------- */
+
+    .job-table-wrap {
+        overflow-x: visible;
+    }
+
+    .job-table {
+        width: 100%;
+        min-width: 0;
+
+        font-size: 14px;
+    }
+
+    .job-table thead {
+        display: none;
+    }
+
+    .job-table,
+    .job-table tbody,
+    .job-table tr,
+    .job-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .job-table tr {
+        margin-bottom: 10px;
+
+        border: 1px solid var(--border-light);
+
+        background: var(--white);
+    }
+
+    .job-table td {
+        padding: 10px;
+
+        border: none;
+        border-bottom: 1px solid var(--border-soft);
+
+        text-align: left;
+
+        overflow-wrap: anywhere;
+    }
+
+    .job-table td:last-child {
+        border-bottom: none;
+    }
+
+    .job-table td::before {
+        content: attr(data-label);
+
+        display: block;
+
+        margin-bottom: 3px;
+
+        color: var(--primary);
+
+        font-size: 11px;
+        line-height: 1.3;
+        font-weight: 700;
+
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE LISTS
+       ----------------------------------------------------- */
+
+    .job-content ul,
+    .job-content ol {
+        padding-left: 22px;
+    }
+
+    .step-list li {
+        padding-left: 44px;
+
+        font-size: 14px;
+    }
+
+    .step-list li::before {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE FAQ
+       ----------------------------------------------------- */
+
+    .faq-q {
+        padding: 13px 15px;
+        font-size: 15px;
+    }
+
+    .faq-a {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE CTA
+       ----------------------------------------------------- */
+
+    .link-area {
+        margin: 30px 15px;
+        padding: 20px 15px;
+    }
+
+    .action-btn {
+        display: block;
+
+        width: 100%;
+
+        margin: 10px 0;
+        padding: 13px 15px;
+
+        font-size: 15px;
+
+        text-align: center;
+    }
+
+    .important-links {
+        flex-direction: column;
+    }
+
+    .important-links .action-btn {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE TAGS
+       ----------------------------------------------------- */
+
+    .tags-container {
+        padding: 20px 15px;
+    }
+
+    .source-note {
+        margin: 20px 0;
+    }
+}
+
+
+/* =========================================================
+   19. VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .job-master-container {
+        margin: 5px;
+    }
+
+    .job-main-header {
+        padding: 24px 12px;
+    }
+
+    .job-main-header h1 {
+        font-size: 20px;
+    }
+
+    .job-main-header p {
+        font-size: 13px;
+    }
+
+    .job-content {
+        padding: 0 12px;
+    }
+
+    .job-sub-heading {
+        font-size: 17px;
+        padding: 10px 12px;
+    }
+
+    .highlight-value {
+        font-size: 18px;
+    }
+
+    .job-table td {
+        padding: 9px;
+    }
+}
+
+
+/* =========================================================
+   20. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .job-master-container *,
+    .job-master-container *::before,
+    .job-master-container *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   21. PRINT
+   ========================================================= */
+
+@media print {
+
+    .job-master-container {
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+
+        border: none;
+        border-radius: 0;
+
+        box-shadow: none;
+
+        color: #000;
+    }
+
+    .job-main-header {
+        background: none !important;
+
+        color: #000;
+
+        border-bottom: 2px solid #000;
+    }
+
+    .job-main-header h1,
+    .job-main-header p {
+        color: #000;
+    }
+
+    .job-highlight-box {
+        background: #fff;
+        border-bottom: 1px solid #000;
+    }
+
+    .job-sub-heading {
+        background: #fff;
+        color: #000;
+
+        border-left-color: #000;
+    }
+
+    .action-btn,
+    .link-area {
+        box-shadow: none;
+    }
+
+    .action-btn {
+        color: #000 !important;
+        background: #fff !important;
+
+        border: 1px solid #000;
+    }
+
+    .job-table tr:hover {
+        background: transparent;
+    }
+
+    .job-master-container a {
+        color: #000;
+    }
+
+    .tags-container {
+        background: #fff;
+    }
+}
+
+
+/* =========================================================
+   END
+   ========================================================= */
